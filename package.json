@@ -1,0 +1,27 @@
+{
+  "name": "design-compressor",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build && npm run build:main",
+    "build:main": "esbuild lib/code.ts --bundle --outfile=dist/code.js",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "browser-image-compression": "^2.0.2",
+    "preact": "^10.27.2"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.119.0",
+    "@preact/preset-vite": "^2.10.2",
+    "@types/node": "^24.10.0",
+    "prettier": "^3.6.2",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.2",
+    "vite-plugin-singlefile": "^2.3.0",
+    "vite-plugin-top-level-await": "^1.6.0",
+    "vite-plugin-wasm": "^3.5.0"
+  }
+}
